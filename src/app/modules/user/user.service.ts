@@ -465,8 +465,17 @@ const addCheckInReward = async (userId: number, checkInAmount: number) => {
       throw new Error("Daily check-in is not available in trial round");
     }
 
-    // ❌ Must complete at least 40 orders
+
+    //add new logic for checkIn 
+    if (user.orderRound !== "round_two" && user.quantityOfOrders !== 0) {
+      throw new Error("Complete at least 40 orders to enable daily check-in");
+    }
+
+
+
+    
     if (user?.orderCountForCheckIn <= 40) {
+      // ❌ Must complete at least 40 orders
       throw new Error("Complete at least 40 orders to enable daily check-in");
     }
 
@@ -1300,5 +1309,5 @@ export const user_services = {
   addBonusReward,
   getSuperiorUserRechargeAndWithdraw,
   getPlatformRechargeAndWithdrawFromSuperiorData,
-  updatePasswordFromAdmin
+  updatePasswordFromAdmin,
 };
