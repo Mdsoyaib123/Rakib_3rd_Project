@@ -18,6 +18,8 @@ const allowedOrigins = [
   "https://autotraderonline.net",
   "https://admin.autotraderonline.net",
   "https://deluxe-mousse-ec6b48.netlify.app",
+  "http://13.49.148.251",
+  "http://13.49.148.251:8080",
   // Add http versions only if you really still serve http in production (usually not needed)
   // "http://autotraderonline.net",
   // "http://admin.autotraderonline.net",
