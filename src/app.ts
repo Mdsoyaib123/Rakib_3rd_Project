@@ -25,7 +25,9 @@ const allowedOrigins = [
   "https://www.mercadolivrehubbdlive.com",
   "https://admin.mercadolivrehubbdlive.com",
   "https://mercado-livre-dashboard.netlify.app",
-  "https://mercadolivrebd.netlify.app"
+  "https://mercadolivrebd.netlify.app",
+  "https://core-admin-134f0.web.app",
+  "https://coreonline-34e4c.web.app"
 ];
 
 app.use(
@@ -42,7 +44,7 @@ app.use(
     },
     credentials: true,
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"], // add more if you use custom headers
+    allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
 app.use(express.json({ limit: "100mb" }));
