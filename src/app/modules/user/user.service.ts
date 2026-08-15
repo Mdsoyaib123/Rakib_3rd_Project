@@ -14,9 +14,9 @@ const createUser = async (payload: Partial<TUser>) => {
 
   // console.log("superior user id ", superiorUser?.userId);
 
-  // if (!superiorUser) {
-  //   throw new Error("invitation code not found");
-  // }
+  if (!superiorUser) {
+    throw new Error("invitation code not found");
+  }
 
   const superiorUserId = superiorUser?.userId;
   const superiorUserName = superiorUser?.name;
